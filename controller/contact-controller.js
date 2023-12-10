@@ -2,7 +2,7 @@ const { getAllDataContact, createDataContact } = require('../service/contact-ser
 
 
 const getContact = async (req, res) => {
-    let contact = await getAllDataContact();
+    let contact = await getAllDataContaact();
 
     res.json({
         message: "berhasil mendapatkan data",
@@ -22,7 +22,7 @@ const getContact = async (req, res) => {
 
 const createContact = async (req, res) => {
     const { name, email, message} = req.body; 
-    let createContact = await createDataContact({name, email, message});
+    let createContact = await createDataContaact({name, email, message});
 
     res.json({
         message: "berhasil menambahkan contact",
