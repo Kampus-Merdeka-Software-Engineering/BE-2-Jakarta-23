@@ -19,11 +19,8 @@ app.use(express.urlencoded({ extended: true }))
 
 
 // membuat endpoint dari server
-// const foodRoutes = require('./routes/food-routes');
 const contactRoutes = require('./routes/contact-routes');
-const { getAllDataContact } = require('./service/contact-service');
-// app.use('/food', foodRoutes)
-app.use('/contact', getAllDataContact)
+app.use('/contact', contactRoutes)
 
 
 // menjalankan server
