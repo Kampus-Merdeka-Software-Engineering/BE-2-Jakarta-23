@@ -1,11 +1,21 @@
 const Contact = require('../models/contact-models');
 
 const getAllDataContact = async () => {
-   return await Contact.findAll();
+    try{
+        return await Contact.findAll();
+    }catch(error){
+        return false;
+    }
+  
 }
 
-const createDataContact = async (contact) => {
-    return await Contact.create(contact);
+const createDataContact = async (name, email, message) => {
+    try{
+        return await Contact.create({name, email, message});
+    }catch(error){
+        return false;
+    }
+    
 } 
 
 
